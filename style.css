@@ -436,3 +436,251 @@ code {
     filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.5));
   }
 }
+
+@media (max-width: 768px) {
+  body > header {
+    padding: 3rem 0 2.5rem;
+  }
+
+  section {
+    margin-bottom: 3.5rem;
+  }
+
+  section:last-of-type {
+    margin-bottom: 0;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+  }
+
+  .container {
+    padding-left: max(1.5rem, env(safe-area-inset-left));
+    padding-right: max(1.5rem, env(safe-area-inset-right));
+  }
+
+  .name {
+    font-size: 2.5rem;
+  }
+
+  .title {
+    font-size: 1rem;
+    letter-spacing: 2px;
+  }
+
+  .contact-info {
+    gap: 1.5rem;
+  }
+
+  .about-card,
+  .experience-item,
+  .degree {
+    padding: 1.5rem;
+  }
+
+  .about-card p {
+    font-size: 1rem;
+  }
+
+  .experience-item {
+    padding-left: 2rem;
+  }
+
+  .job-title {
+    font-size: 1.5rem;
+  }
+
+  .achievements li {
+    padding: 0.6rem 0 0.6rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body > header {
+    padding: 2rem 0 2rem;
+  }
+
+  main {
+    padding: 2rem 0;
+  }
+
+  section {
+    margin-bottom: 3rem;
+  }
+
+  section:last-of-type {
+    margin-bottom: 0;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  footer {
+    padding: 1.25rem 1rem;
+    padding-bottom: max(1.25rem, env(safe-area-inset-bottom));
+  }
+
+  .container {
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+  }
+
+  .name {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+
+  .title {
+    font-size: 0.9rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-info {
+    gap: 1.2rem;
+  }
+
+  .contact-info a svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .about-card,
+  .experience-item,
+  .degree {
+    padding: 1.25rem;
+    border-radius: 12px;
+  }
+
+  .experience-item {
+    padding-left: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .about-card p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  .about-values {
+    gap: 0.75rem;
+  }
+
+  .about-values li {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .experience-item::before {
+    width: 3px;
+  }
+
+  .job-title {
+    font-size: 1.3rem;
+  }
+
+  .company {
+    font-size: 1rem;
+  }
+
+  .achievements li {
+    padding: 0.5rem 0 0.5rem 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  .achievements li::before {
+    font-size: 1rem;
+    top: 0.65rem;
+  }
+
+  .degree {
+    padding: 1.25rem 1.25rem 1.25rem 1.5rem;
+  }
+
+  .school {
+    font-size: 1.1rem;
+  }
+
+  .contact-link {
+    padding: 0.85rem 2rem;
+    font-size: 0.85rem;
+  }
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .name {
+    animation: none;
+    filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.4));
+  }
+}
+
+@media (prefers-contrast: high) {
+  :root {
+    --text-muted: #e0daf5;
+    --cosmic-purple: #b8aed8;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  .about-card,
+  .experience-item,
+  .degree {
+    border-width: 2px;
+  }
+}
+
+@media print {
+  body::before {
+    display: none;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+
+  h2 {
+    color: #333;
+  }
+
+  .name {
+    background: none;
+    -webkit-text-fill-color: #333;
+    color: #333;
+  }
+
+  .about-card,
+  .experience-item,
+  .degree {
+    border: 1px solid #ccc;
+    box-shadow: none;
+    break-inside: avoid;
+  }
+
+  .contact-info a,
+  .contact-link {
+    color: black;
+  }
+}
