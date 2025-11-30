@@ -1,3 +1,16 @@
+:root {
+  --deep-space: #0a0514;
+  --dark-purple: #1a1625;
+  --royal-purple: #4338ca;
+  --bright-purple: #6d5bd0;
+  --cosmic-purple: #8b7fb8;
+  --soft-purple: #a89cc8;
+  --gold: #d4af37;
+  --light-gold: #f4d03f;
+  --text-muted: #c7c1e0;
+  --text-light: #f8f7fc;
+}
+
 *,
 *::before,
 *::after {
