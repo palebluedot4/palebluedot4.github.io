@@ -304,6 +304,28 @@ code {
   font-style: italic;
 }
 
+.achievements {
+  padding-left: 0;
+  list-style: none;
+}
+
+.achievements li {
+  position: relative;
+  padding: 0.8rem 0 0.8rem 2rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.achievements li::before {
+  content: "▹";
+  position: absolute;
+  top: 0.95rem;
+  left: 0;
+  color: var(--gold);
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
 @keyframes glow {
   0%,
   100% {
