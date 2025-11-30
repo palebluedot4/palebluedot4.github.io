@@ -159,6 +159,51 @@ code {
   animation: glow 3s ease-in-out infinite;
 }
 
+.title {
+  margin-bottom: 2rem;
+  color: var(--text-muted);
+  font-size: 1.2rem;
+  font-weight: 300;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.contact-info {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-info a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  color: var(--gold);
+  transition: all 0.4s ease;
+}
+
+.contact-info a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--light-gold);
+  transform: translateX(-50%);
+  transition: all 0.4s ease;
+}
+
+.contact-info a:hover {
+  filter: drop-shadow(0 5px 15px rgba(212, 175, 55, 0.4));
+  transform: translateY(-3px);
+}
+
+.contact-info a:hover::after {
+  width: 100%;
+}
+
 @keyframes glow {
   0%,
   100% {
