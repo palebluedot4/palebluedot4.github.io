@@ -416,6 +416,17 @@ code {
   transform: translateY(-3px);
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @keyframes glow {
   0%,
   100% {
