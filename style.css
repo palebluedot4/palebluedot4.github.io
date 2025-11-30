@@ -86,3 +86,15 @@ section {
 section:last-of-type {
   margin-bottom: 0;
 }
+
+footer {
+  margin-top: 3rem;
+  padding: 1.5rem 2rem;
+  padding-bottom: max(1.5rem, env(safe-area-inset-bottom));
+  color: var(--cosmic-purple);
+  font-size: 0.8rem;
+  text-align: center;
+  background: rgba(26, 22, 37, 0.8);
+  border-top: 1px solid rgba(67, 56, 202, 0.4);
+}
+
