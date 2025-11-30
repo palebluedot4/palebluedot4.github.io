@@ -204,6 +204,40 @@ code {
   width: 100%;
 }
 
+.about-card,
+.experience-item,
+.degree {
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  background: rgba(26, 22, 37, 0.4);
+  border: 1px solid rgba(67, 56, 202, 0.4);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+  transition: all 0.4s ease;
+}
+
+.about-card::before,
+.experience-item::before,
+.degree::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--gold), var(--royal-purple));
+}
+
+.about-card:hover,
+.experience-item:hover,
+.degree:hover {
+  background: rgba(26, 22, 37, 0.8);
+  border-color: var(--gold);
+  box-shadow: 0 10px 40px rgba(212, 175, 55, 0.2);
+  transform: translateY(-5px);
+}
+
 @keyframes glow {
   0%,
   100% {
