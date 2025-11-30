@@ -115,6 +115,51 @@
           </ul>
         </div>
       </section>
+
+      <section id="experience" aria-labelledby="experience-heading">
+        <h2 id="experience-heading">Work Experience</h2>
+        <article class="experience-item">
+          <header class="experience-header">
+            <h3 class="job-title">Backend Engineer</h3>
+            <p class="company">Spring Trees Technology</p>
+            <p class="duration">
+              <time datetime="2024-06">June 2024</time> - Present
+            </p>
+          </header>
+          <ul class="achievements">
+            <li>
+              Engineered and maintained a high-concurrency backend system
+              serving over 3.25 million users (~550k DAU). Sustained peak loads
+              exceeding 5,000 RPS while maintaining stable low-latency
+              performance (average ~50ms) during high-traffic campaigns.
+            </li>
+            <li>
+              Continuously optimized database performance through execution plan
+              analysis, strategic indexing, and proactive partitioning based on
+              projected data volumes. Notably, architected the offloading of
+              complex reporting workloads from OLTP to an OLAP solution,
+              eliminating critical bottlenecks and reducing report generation
+              time by 98%.
+            </li>
+            <li>
+              Developed high-resilience, self-healing Redis clients. Evolved the
+              core locking mechanism from <code>sync.RWMutex</code> to a modern,
+              lock-free <code>atomic.Pointer</code> architecture, ensuring
+              zero-contention reads for the high-concurrency proxy service.
+              Integrated custom Circuit Breakers with exponential backoff and
+              jitter to prevent thundering herd effects.
+            </li>
+            <li>
+              Championed the adoption of modern Go idioms and solid design
+              principles to evolve legacy architectures. Transformed tightly
+              coupled logic into modular, interface-driven components using
+              Generics and Dependency Inversion. This modernization
+              significantly improved developer experience, code readability, and
+              fostered a more collaborative engineering environment.
+            </li>
+          </ul>
+        </article>
+      </section>
     </main>
   </body>
 </html>
