@@ -18,3 +18,8 @@
   margin: 0;
   padding: 0;
 }
+
+html {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
