@@ -169,34 +169,32 @@
               scanning, and image scan-on-push across the pipeline.
             </li>
             <li>
-              Engineered and maintained a high-concurrency backend system
-              serving over 3.75 million users (~500k DAU). Sustained peak loads
-              exceeding 5,000 RPS while maintaining stable low-latency
-              performance (&lt;50ms) during high-traffic campaigns.
+              Built and scaled a high-concurrency backend serving over 3.75
+              million users (~500k DAU), handling traffic peaks of 5,000 RPS at
+              &lt;50ms during high-traffic campaigns.
             </li>
             <li>
-              Continuously optimized database performance through execution plan
-              analysis, strategic indexing, and proactive partitioning based on
-              projected data volumes. Notably, architected the offloading of
-              complex reporting workloads from OLTP to an OLAP solution,
-              eliminating critical bottlenecks and reducing report generation
-              time by 98%.
+              Optimized PostgreSQL performance through execution-plan analysis,
+              strategic indexing, and projected-volume partitioning. Architected
+              the offloading of heavy reporting workloads from PostgreSQL (OLTP)
+              to Amazon Redshift (OLAP), eliminating a critical bottleneck and
+              cutting report generation time by ~98% — from 11h 24m down to ~14
+              min.
             </li>
             <li>
-              Developed high-resilience, self-healing Redis clients. Evolved the
-              core locking mechanism from <code>sync.RWMutex</code> to a modern,
-              lock-free <code>atomic.Pointer</code> architecture, ensuring
-              zero-contention reads for the high-concurrency proxy service.
-              Integrated custom Circuit Breakers with exponential backoff and
-              jitter to prevent thundering herd effects.
+              Built two concurrency-safe, self-healing Redis cache client
+              libraries — a lock-free <code>atomic.Pointer</code> implementation
+              for zero-contention reads on the high-concurrency proxy hot path,
+              and a <code>sync.RWMutex</code>-based implementation — and
+              integrated custom circuit breakers with exponential backoff and
+              jitter to prevent thundering-herd effects.
             </li>
             <li>
-              Championed the adoption of modern Go idioms and solid design
-              principles to evolve legacy architectures. Transformed tightly
+              Championed the adoption of modern Go idioms and SOLID design
+              principles to evolve legacy architectures, refactoring tightly
               coupled logic into modular, interface-driven components using
-              Generics and Dependency Inversion. This modernization
-              significantly improved developer experience, code readability, and
-              fostered a more collaborative engineering environment.
+              Generics and Dependency Inversion — improving testability,
+              readability, and the team's velocity on new features.
             </li>
           </ul>
         </article>
